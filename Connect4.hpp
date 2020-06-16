@@ -50,7 +50,7 @@ class Connect4 {
     int pickBestMove(int player);
 	// Minimax that search for the best posible move for the player 'player'.
 	miniMaxRet miniMax(int evBoard[width][height], int depth, bool maximizingPlayer, int player);
-	// Minimax upgraded with Alpha-Beta Prunning
+	// Minimax upgraded with Alpha-Beta Pruning
 	miniMaxRet miniMaxAlphaBeta(int evBoard[width][height], int depth, int alpha, int beta, bool maximizingPlayer, int player);
 };
 
