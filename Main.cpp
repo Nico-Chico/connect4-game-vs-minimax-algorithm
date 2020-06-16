@@ -114,9 +114,9 @@ int main (int argc, char const* argv[]) {
 //				game.setPiece(bestCol, currPlayer->color);
 
 				//AI move using MINIMAX
-//				miniMaxRet ret = game.miniMax(game.board, 4, true, currPlayer->color);	
-				//AI move using MINIMAX with ALPHA BETA PRUNING
-				miniMaxRet ret = game.miniMaxAlphaBeta(game.board, 5, -INT_MAX, INT_MAX, true, currPlayer->color);	
+//				miniMaxRet ret = game.miniMax(game.board, 8, true, currPlayer->color);	
+//				//AI move using MINIMAX with ALPHA BETA PRUNING
+				miniMaxRet ret = game.miniMaxAlphaBeta(game.board, 8, -INT_MAX, INT_MAX, true, currPlayer->color);	
 
 				t2 = std::chrono::high_resolution_clock::now();		// Time point 2
 				duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();	// Calc duration

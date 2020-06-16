@@ -332,22 +332,22 @@ miniMaxRet Connect4::miniMax(int evBoard[width][height], int depth, bool maximiz
 	
 	// // If depth = 0 or isTerminal
 	if(playerWin) {
-		std::cout << "Depth: " << depth << " | PLA_WIN | Score: " << 1000000000 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | PLA_WIN | Score: " << 1000000000 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, 1000000000);
 	}
 	if(opponentWin) {
-		std::cout << "Depth: " << depth << " | OPP_WIN | Score: " << -1000000000 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | OPP_WIN | Score: " << -1000000000 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, -1000000000);
 	}
 	if(validColumns.size() == 0) {	// No valid movements
-		std::cout << "Depth: " << depth << " | NOVALID | Score: " << 0 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | NOVALID | Score: " << 0 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, 0);
 	}
 	if(depth == 0 ) {
-		int sc = scoreMove(evBoard, player);
-		std::cout << "Depth: " << depth << " | depth_0 | Score: " << sc << ", Column " << -1 <<std::endl;
-		return miniMaxRet(-1, sc);		
-//		return miniMaxRet(-1, scoreMove(evBoard, player));
+//		int sc = scoreMove(evBoard, player);
+//		std::cout << "Depth: " << depth << " | depth_0 | Score: " << sc << ", Column " << -1 <<std::endl;
+//		return miniMaxRet(-1, sc);		
+		return miniMaxRet(-1, scoreMove(evBoard, player));
 	}
 	// IF NOTHING ABOVE ELSE:
 	if(maximizingPlayer) {
@@ -368,7 +368,7 @@ miniMaxRet Connect4::miniMax(int evBoard[width][height], int depth, bool maximiz
 				column = c;		
 			}
 		}
-		std::cout << "Depth: " << depth << " |   MAX   | Score: " << value << ", Column " << column <<std::endl;
+//		std::cout << "Depth: " << depth << " |   MAX   | Score: " << value << ", Column " << column <<std::endl;
 		return miniMaxRet(column, value);
 	} else {	// Minimizing player
 		int value = INT_MAX;
@@ -388,7 +388,7 @@ miniMaxRet Connect4::miniMax(int evBoard[width][height], int depth, bool maximiz
 				column = c;		
 			}
 		}
-		std::cout << "Depth: " << depth << " |   MIN   | Score: " << value << ", Column " << column <<std::endl;
+//		std::cout << "Depth: " << depth << " |   MIN   | Score: " << value << ", Column " << column <<std::endl;
 		return miniMaxRet(column, value);
 	}
 }
@@ -413,22 +413,22 @@ miniMaxRet Connect4::miniMaxAlphaBeta(int evBoard[width][height], int depth, int
 	
 	// // If depth = 0 or isTerminal
 	if(playerWin) {
-		std::cout << "Depth: " << depth << " | PLA_WIN | Score: " << 1000000000 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | PLA_WIN | Score: " << 1000000000 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, 1000000000);
 	}
 	if(opponentWin) {
-		std::cout << "Depth: " << depth << " | OPP_WIN | Score: " << -1000000000 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | OPP_WIN | Score: " << -1000000000 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, -1000000000);
 	}
 	if(validColumns.size() == 0) {	// No valid movements
-		std::cout << "Depth: " << depth << " | NOVALID | Score: " << 0 << ", Column " << -1 <<std::endl;
+//		std::cout << "Depth: " << depth << " | NOVALID | Score: " << 0 << ", Column " << -1 <<std::endl;
 		return miniMaxRet(-1, 0);
 	}
 	if(depth == 0 ) {
-		int sc = scoreMove(evBoard, player);
-		std::cout << "Depth: " << depth << " | depth_0 | Score: " << sc << ", Column " << -1 <<std::endl;
-		return miniMaxRet(-1, sc);		
-//		return miniMaxRet(-1, scoreMove(evBoard, player));
+//		int sc = scoreMove(evBoard, player);
+//		std::cout << "Depth: " << depth << " | depth_0 | Score: " << sc << ", Column " << -1 <<std::endl;
+//		return miniMaxRet(-1, sc);		
+		return miniMaxRet(-1, scoreMove(evBoard, player));
 	}
 	// IF NOTHING ABOVE ELSE:
 	if(maximizingPlayer) {
@@ -453,7 +453,7 @@ miniMaxRet Connect4::miniMaxAlphaBeta(int evBoard[width][height], int depth, int
 			if(alpha >= beta)
 				break;
 		}
-		std::cout << "Depth: " << depth << " |   MAX   | Score: " << value << ", Column " << column <<std::endl;
+//		std::cout << "Depth: " << depth << " |   MAX   | Score: " << value << ", Column " << column <<std::endl;
 		return miniMaxRet(column, value);
 	} else {	// Minimizing player
 		int value = INT_MAX;
@@ -477,7 +477,7 @@ miniMaxRet Connect4::miniMaxAlphaBeta(int evBoard[width][height], int depth, int
 			if(alpha >= beta)
 				break;
 		}
-		std::cout << "Depth: " << depth << " |   MIN   | Score: " << value << ", Column " << column <<std::endl;
+//		std::cout << "Depth: " << depth << " |   MIN   | Score: " << value << ", Column " << column <<std::endl;
 		return miniMaxRet(column, value);
 	}
 }
