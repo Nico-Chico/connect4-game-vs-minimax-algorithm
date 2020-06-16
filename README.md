@@ -18,6 +18,9 @@ The project has been entirely developed in C++ language.
 
 ## Game description:
 
+![game img](https://gitlab.com/Nico_Chico/connect4-game-vs-minimax-algorithm/-/raw/master/gameScreenshot.png)
+
+
 ## How to compile the code
 
 ```bash
@@ -96,7 +99,7 @@ To run:
 
 
 ## Experiment, analysis & conclusions:
-AB: 8, between 41353265442 and 62813541345 µs for each movement
+		AB: 8, between 41353265442 and 62813541345 µs for each movement
 
 ---
  Project by: **Nicolás Magro Cruzado** | [GitLab](https://gitlab.com/Nico_Chico) ⌨️
