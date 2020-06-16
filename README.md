@@ -110,73 +110,73 @@ This selection will be based on a score system when the depth is 0 or there is a
 
 Below I show 4 games with different depth parameters and using or not alpha-beta pruning.
 You can see the cost in time of each IA movement in the item.
-
-        Minimax depth 6:
-        	START GAME	
-        	  481807µs
-        	  445949µs
-        	  382154µs
-        	  478308µs
-        	  462658µs
-        	  432432µs
-        	  313379µs
-        	  304806µs
-        	  228421µs
-        	  287337µs
-        	  251501µs
-        	  248089µs
-          	  END GAME
         
-        Minimax depth 6 with alpha-beta prunning:
-        	START GAME
-        	  482786µs
-        	  478974µs
-        	  468419µs
-        	  310755µs
-        	  201079µs
-        	  139831µs
-        	  147130µs
-         	  157240µs
-        	  140004µs
-        	  112847µs
-        	   43294µs
-          	  END GAME
-        
-        Minimax depth 8:
-        	START GAME	
-        	24084293µs
-        	22199679µs
-        	13910414µs
-        	18567941µs
-        	15425741µs
-        	12343115µs
-        	10697763µs
-        	 2914534µs
-        	  876564µs
-        	  509791µs
-        	  404952µs
-        	   93477µs
-        	  111103µs
-        	   66411µs
-        	  END GAME
-        	   
-        Minimax depth 8 with alpha-beta prunning:
-        	START GAME
-        	22139036µs
-        	14837762µs
-        	22009460µs
-        	20162463µs
-        	15936356µs
-        	 4734893µs
-        	 2404324µs
-        	 1469703µs
-        	  471068µs
-        	  139007µs
-        	  110568µs
-        	   45465µs
-        	    4988µs
-        	    2859µs
-        	  END GAME
+    Minimax depth 6:
+                	START GAME	
+                	  481807µs
+                	  445949µs
+                	  382154µs
+                	  478308µs
+                	  462658µs
+                	  432432µs
+                	  313379µs
+                	  304806µs
+                	  228421µs
+                	  287337µs
+                	  251501µs
+                	  248089µs
+                  	  END GAME
+                
+    Minimax depth 6 with alpha-beta prunning:
+                	START GAME
+                	  482786µs
+                	  478974µs
+                	  468419µs
+                	  310755µs
+                	  201079µs
+                	  139831µs
+                	  147130µs
+                 	  157240µs
+                	  140004µs
+                	  112847µs
+                	   43294µs
+                  	  END GAME
+                
+    Minimax depth 8:
+                	START GAME	
+                	24084293µs
+                	22199679µs
+                	13910414µs
+                	18567941µs
+                	15425741µs
+                	12343115µs
+                	10697763µs
+                	 2914534µs
+                	  876564µs
+                	  509791µs
+                	  404952µs
+                	   93477µs
+                	  111103µs
+                	   66411µs
+                	  END GAME
+                	   
+    Minimax depth 8 with alpha-beta prunning:
+                	START GAME
+                	22139036µs
+                	14837762µs
+                	22009460µs
+                	20162463µs
+                	15936356µs
+                	 4734893µs
+                	 2404324µs
+                	 1469703µs
+                	  471068µs
+                	  139007µs
+                	  110568µs
+                	   45465µs
+                	    4988µs
+                	    2859µs
+                	  END GAME
 
 
 ### Conclusions:
