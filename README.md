@@ -12,7 +12,7 @@ YOU CAN ALSO USE A PROPER .MD VISOR TO READ IT OR CONVERT TO PDF -->
 
 This is the third **laboratory work** of the **Introduction to Artificial Intelligence** 2020 course in the Computer Science program from **Politechnika Wrocławska** University.
 
-The objective is getting familiar with Minimax algorithm and alpha-beta prunning using it to play a game. The game selected is connect 4.
+The objective is getting familiar with Minimax algorithm and alpha-beta pruning using it to play a game. The game selected is Connect 4. (https://en.wikipedia.org/wiki/Connect_Four)
 
 The project has been entirely developed in C++ language.
 
@@ -77,8 +77,8 @@ This selection will be based on a score system when the depth is 0 or there is a
             (* Initial call *)
             minimax(origin, depth, TRUE)
                 
-#### Minimax algorithm upgraded with Alpha-Beta prunning
-I use the minimax algorithm in order to make a search of depth n betwenn all the possible moves, to finally select the best move.
+#### Minimax algorithm upgraded with Alpha-Beta pruning
+I use the minimax algorithm in order to make a search of depth n between all the possible moves, to finally select the best move.
 This selection will be based on a score system when the depth is 0 or there is a Terminal node. To get info about this score and how the minimax algorithm match with Connect4 see the comments on the code in `Connect4.hpp`
 
             function alphabeta(node, depth, α, β, maximizingPlayer) is
@@ -106,9 +106,98 @@ This selection will be based on a score system when the depth is 0 or there is a
 
 
 *For a more precisely description see the comments on the code.*
-## Experiment, analysis & conclusions:
-*In progress*
-		AB: 8, between 41353265442 and 62813541345 µs for each movement
+## Algorithm compute Times analysis 
+
+Below I show 4 games with different depth parameters and using or not alpha-beta pruning.
+You can see the cost in time of each IA movement in the item.
+
+        Minimax depth 6:
+        	START GAME	
+        	  481807µs
+        	  445949µs
+        	  382154µs
+        	  478308µs
+        	  462658µs
+        	  432432µs
+        	  313379µs
+        	  304806µs
+        	  228421µs
+        	  287337µs
+        	  251501µs
+        	  248089µs
+          	  END GAME
+        
+        Minimax depth 6 with alpha-beta prunning:
+        	START GAME
+        	  482786µs
+        	  478974µs
+        	  468419µs
+        	  310755µs
+        	  201079µs
+        	  139831µs
+        	  147130µs
+         	  157240µs
+        	  140004µs
+        	  112847µs
+        	   43294µs
+          	  END GAME
+        
+        Minimax depth 8:
+        	START GAME	
+        	24084293µs
+        	22199679µs
+        	13910414µs
+        	18567941µs
+        	15425741µs
+        	12343115µs
+        	10697763µs
+        	 2914534µs
+        	  876564µs
+        	  509791µs
+        	  404952µs
+        	   93477µs
+        	  111103µs
+        	   66411µs
+        	  END GAME
+        	   
+        Minimax depth 8 with alpha-beta prunning:
+        	START GAME
+        	22139036µs
+        	14837762µs
+        	22009460µs
+        	20162463µs
+        	15936356µs
+        	 4734893µs
+        	 2404324µs
+        	 1469703µs
+        	  471068µs
+        	  139007µs
+        	  110568µs
+        	   45465µs
+        	    4988µs
+        	    2859µs
+        	  END GAME
+
+
+### Conclusions:
+Obviously the time to make a decision is reduced as the number of possibilities to be evaluated is reduced. (Fewer cells available)
+
+This reduction is accentuated by the use of alpha-beta pruning.
+
+The more advanced the game is, the more options are pruned, and the more time is reduced.
+
+We can also see that the power of the pruning is more noticeable the deeper we launch the Minimax algorithm
+
+The result given by the minimax algorithm is very good. (If we want AI to always win)
+
+From a depth of 3 it becomes almost impossible to defeat, as it is taking into account all possible steps in 3 moves. If we add more depth, it's already unfair to the human player.
+
+### Possible improvements
+We could save the tree that generates the algorithm and when executing a movement we could keep that branch.
+So if the depth is n, we should only compute the new n-depth possibilities and not all the previous ones, saving time in creating the boards and evaluating them.
+
+
+    
 
 ---
  Project by: **Nicolás Magro Cruzado** | [GitLab](https://gitlab.com/Nico_Chico) ⌨️
