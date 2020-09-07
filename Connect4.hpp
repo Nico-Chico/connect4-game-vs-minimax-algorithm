@@ -102,7 +102,7 @@ void Connect4::showBoard() {
 		if(i!=0)
 			representation.append("\t\t\t╠══╬══╬══╬══╬══╬══╬══╣\n");
 		else
-			representation.append("\t\t\t╚══╩══╩══╩══╩══╩══╩══╝\n");	
+			representation.append("\t\t\t╚══╩══╩══╩══╩══╩══╩══╝");	
 	}
 	std::cout << representation << std::endl;
 }
