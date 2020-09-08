@@ -19,10 +19,10 @@ class Connect4 {
   public:
 	static const int width = 7;
 	static const int height = 6;
-//  private:
 	int board[width][height]; 	// Board of the game
+  private:
   	int winner;  // 0  no winner yet; 1 or 2 player 1 or 2 is the winner
-//  public:
+  public:
 	// Initialice the board to 0
   	Connect4();
   	// Return the value of the position	

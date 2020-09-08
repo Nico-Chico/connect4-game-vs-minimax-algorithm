@@ -109,7 +109,7 @@ void difficultySelector(Player &p1, Player &p2) {
 int main (int argc, char const* argv[]) {
 	Player p1(1, 0);	// Blue 
 	Player p2(2, 1);    // Red
-	difficultySelector(p1, p2);
+	difficultySelector(p1, p2);		// Launch Selection Menu
 	Connect4 game;
 	Player* currPlayer = &p1; 	// AIM TO CURRENT PLAYER //First turn to p1;
 	
@@ -130,7 +130,7 @@ int main (int argc, char const* argv[]) {
 		while(!turnFinished) {
 			if(currPlayer->diff==0) {	// HUMAN PLAYER
 				// UPDATING SCREEN
-//				system("clear");
+				system("clear");
 				std::cout << title << std::endl;
 				//Show selection piece
 				std::cout << "\t\t\t ";
@@ -175,23 +175,22 @@ int main (int argc, char const* argv[]) {
 
 				t1 = std::chrono::high_resolution_clock::now(); 	// Time point 1
 				
-				//AI moves using simple bestMove selector;
+				//Machine moves using simple bestMove selector;
 //				int bestCol = game.pickBestMove(currPlayer->color);
 //				std::cout <<"    Column selected by AI: " << bestCol << std::endl;
 //				game.setPiece(bestCol, currPlayer->color);
 
-				//AI move using MINIMAX
-//				miniMaxRet ret = game.miniMax(game.board, 8, true, currPlayer->color);	
-//				//AI move using MINIMAX with ALPHA BETA PRUNING
+//				//Machine move using MINIMAX with ALPHA BETA PRUNING
 				miniMaxRet ret = game.miniMaxAlphaBeta(game.board, currPlayer->diff, -INT_MAX, INT_MAX, true, currPlayer->color);	
 
 				t2 = std::chrono::high_resolution_clock::now();		// Time point 2
-				duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();	// Calc duration
+				duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();	// Calculating duration
+
 				//Showing data of the IA move.
-				std::cout << "    AI data |  Score: " << ret.score << " | Selected col: " << ret.bestMove << " | Time wasted: " << duration << "µs"  << std::endl;
+				std::cout << "    Machine move data |  Score: " << ret.score << " | Selected col: " << ret.bestMove << " | Computing time: " << duration << "µs"  << std::endl;
 				game.setPiece(ret.bestMove, currPlayer->color);
 
-				usleep(1000000);		// Delay
+				usleep(1000000);		// Delay for better experience
 				turnFinished = true;
 			}
 		}
@@ -206,6 +205,7 @@ int main (int argc, char const* argv[]) {
 	system("clear");
 	std::cout << title << std::endl << std::endl;
 	game.showBoard();	// Show the board;
+	std::cout << std::endl;
 	if(winner == -1)
 		std::cout << "    The board is full! No winner :(  " << std::endl;
 	else if(winner == 1)
