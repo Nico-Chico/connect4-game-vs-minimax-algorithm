@@ -1,18 +1,12 @@
-# Connect4 game vs Minimax algorithm
-
-Connect4 game implemented on C++ with possibility of Player vs Machine, Player vs Player and Machine vs Machine.
-Machine IA consist on a Minimax Algorithm with Alpha-Beta Prunning
-
 <!-- THIS FILE IS ON MARKDOWN FORMAT. PLEASE READ IT ON GITLAB REPO: "https://gitlab.com/Nico_Chico/backtraking-algorithm-for-sudoku"
 YOU CAN ALSO USE A PROPER .MD VISOR TO READ IT OR CONVERT TO PDF -->
 
-# Backtraking Algorithm for Sudoku
+# Connect4 game vs Minimax algorithm
 
-*Laboratory 3, Introduction to Artificial Intelligence*
+Connect4 game for Linux Terminal implemented on C++ with possibility of Player vs Machine, Player vs Player and Machine vs Machine.
+Machine IA consist on a Minimax Algorithm with Alpha-Beta Prunning
 
-This is the third **laboratory work** of the **Introduction to Artificial Intelligence** 2020 course in the Computer Science program from **Politechnika Wrocławska** University.
-
-The objective is getting familiar with Minimax algorithm and alpha-beta pruning using it to play a game. The game selected is Connect 4. (https://en.wikipedia.org/wiki/Connect_Four)
+The objective of this project is getting familiar with Minimax algorithm and alpha-beta pruning using it to play a game. The game selected is Connect Four (also called as "four in a line"). (https://en.wikipedia.org/wiki/Connect_Four)
 
 The project has been entirely developed in C++ language.
 
