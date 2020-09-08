@@ -17,6 +17,8 @@ The objective is get 4 pieces connected in vertical, horizontal or diagonals.
 
 ![game img](https://gitlab.com/Nico_Chico/connect4-game-vs-minimax-algorithm/-/raw/master/gameScreenshot.png)
 
+![game img](https://gitlab.com/Nico_Chico/connect4-game-vs-minimax-algorithm/-/raw/master/selectionmenuScreenshot.png)
+
 # Parameters
 The game have the posibility of select with player start, what type of player is each one of them (human or IA) and switch the alpha-beta prunning and set the start depth of the Minimax algorithm.
 For all this you will have to make the changes in the main.cpp and rebuild. 
