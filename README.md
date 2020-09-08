@@ -25,28 +25,26 @@ For all this you will have to make the changes in the main.cpp and rebuild.
 ## How to compile the code
 
 ```bash
-g++ -Wall -o Connect4 main.cpp
+g++ -Wall -o ConnectFour main.cpp
 ```
 
 ## To run the program
 
-There is different versions already compiled with fixed parameters to make it easy.
-`Connect4_PlvsAI` will run a game vs AI but it will not show any AI information on the screen.
-
-`Connect4_PlvsAI` with info will show AI background info on the screen.
-
 To run:
-*In the project directory*
+*Execute the ConnectFour file*
 ```bash
-./Connect4...
+./ConnectFour
 ```
+There are also compiled within the folder machine_moves_info which have activated the console output of the Minimax algorithm, which will allow us to see in detail all the search tree in each move.
+
+
 ## Project Structure
 Basically, the code consists int:
 ### Connect4.hpp class
-	Deal with all the game operations and the AI and main function
+	Deal with all the game board operations and the AI funtions used for Minimax algorithm and AlfaBeta prunning.
 		
 ### Main.cpp:
-	Control the gameLoop and most of the important set up parameters.
+	Control the game loop, the input and output of the player and most of the important set up parameters.
 	
 ### Algorithm used
 #### Minimax algorithm
