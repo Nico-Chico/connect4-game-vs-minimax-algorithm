@@ -9,7 +9,7 @@ The "intelligence" of the machine consists of a MiniMax algorithm with Alpha-Bet
 The aim of this project is to become familiar with the Minimax algorithm and alpha-beta pruning by discovering its features and functionality through its implementation in a game. 
 
 Another objective of the project to highlight has been to develop a fully interactive console interface, with a pleasant experience. I have achieved this by using Unicode characters, to give colour and shape, and by precisely controlling the text flow in the terminal.
-As we can see, not all console programs have to be ugly and crude in their use. With these ideas you can give them a facelift and make them more interesting and enjoyable.
+As we can see, not all console programs have to be ugly and boring in their use. With these ideas you can give them a facelift and make them more interesting and enjoyable.
 
 When the game is run, a selection menu appears that allows us to choose the 2 players. All options are allowed, Human vs Human, Human vs Machine or Machine vs Machine. 
 The machine has several difficulty levels, corresponding to the depth with which the MiniMax algorithm tree is launched.
@@ -110,7 +110,7 @@ This is an improvement of the algorithm, using a technique to reduce the number 
 
 *To get more info about the structure of the code, the score system and how the minimax algorithm match with ConnectFour see the comments on the code in file `Connect4.hpp` and `main.cpp`*
 	
-## Algorithm compute Times analysis 
+## Algorithm compute times analysis 
 
 Below I show 4 games with different depth parameters and using or not alpha-beta pruning.
 You can see the cost in time of each IA movement in the item. Each turn is represented by a line.
