@@ -57,7 +57,7 @@ When the machine have to make a decision, the program launch the Minimax algorit
 After launching the selection menu, it control the game loop, the input and output of the player and set up parameters. 
 	
 
-### Algorithm used
+## Algorithm used
 #### Minimax algorithm
 I use the minimax algorithm in order to make a search of depth n betwenn all the possible moves, to finally select the best move.
 This selection will be based on a score system when the depth is 0 or there is a Terminal node. 
