@@ -31,6 +31,8 @@ The objective is get 4 pieces connected in vertical, horizontal or diagonals.
 
 ## How to compile the code
 
+Initially the program is designed to run in linux on any terminal that supports Unicode, but the translation for Windows should be simple, changing the `getch()` function implemented in the `main.cpp` for the one included in the Windows `conio.h` library.
+
 ```bash
 g++ -Wall -o ConnectFour main.cpp
 ```
