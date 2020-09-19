@@ -49,12 +49,12 @@ To activate this debug output, simply uncomment the corresponding lines of code 
 ## Project Structure
 Basically, the code consists on:
 ### Connect4.hpp class
-	Deal with all the game board operations and the AI funtions used for Minimax algorithm and AlfaBeta prunning.
+Deal with all the game board operations and the AI funtions used for Minimax algorithm and AlfaBeta prunning.
 	
-	When the machine have to make a decision, the program launch the Minimax algorithm, who analyses all possible future moves until he finds one that benefits him and harms the other. When the algorithm reaches a base case, there is a function that scores the state of the board according to how close it is to winning.
+When the machine have to make a decision, the program launch the Minimax algorithm, who analyses all possible future moves until he finds one that benefits him and harms the other. When the algorithm reaches a base case, there is a function that scores the state of the board according to how close it is to winning.
 		
 ### Main.cpp:
-	After launching the selection menu, it control the game loop, the input and output of the player and set up parameters. 
+After launching the selection menu, it control the game loop, the input and output of the player and set up parameters. 
 	
 
 ### Algorithm used
@@ -108,7 +108,7 @@ This is an improvement of the algorithm, using a technique to reduce the number 
 
 
 
-*To get more info about the structure of the code, the score system and how the minimax algorithm match with ConnectFour see the comments on the code in file `Connect4.hpp`*
+*To get more info about the structure of the code, the score system and how the minimax algorithm match with ConnectFour see the comments on the code in file `Connect4.hpp` and `main.cpp`*
 	
 ## Algorithm compute Times analysis 
 
